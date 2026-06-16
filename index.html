@@ -4,144 +4,160 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>M Safi | Developer Portfolio</title>
+<title>M Safi | Portfolio</title>
 
 <style>
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, sans-serif;
 }
 
 body{
-    background:#0d1117;
+    font-family:Segoe UI, sans-serif;
+    background:#0f172a;
     color:white;
-    line-height:1.6;
 }
 
-header{
+.hero{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
     text-align:center;
-    padding:60px 20px;
-    background:linear-gradient(135deg,#238636,#58a6ff);
+    background:linear-gradient(135deg,#0f172a,#1e293b,#2563eb);
 }
 
-header h1{
-    font-size:3rem;
+.hero h1{
+    font-size:4rem;
+    margin-bottom:10px;
 }
 
-header p{
-    font-size:1.2rem;
-    margin-top:10px;
+.hero span{
+    color:#38bdf8;
 }
 
-.container{
-    width:80%;
-    margin:auto;
-    padding:40px 0;
-}
-
-.card{
-    background:#161b22;
-    padding:25px;
-    border-radius:12px;
-    margin-bottom:20px;
-    box-shadow:0 0 10px rgba(255,255,255,0.05);
-}
-
-h2{
-    color:#58a6ff;
-    margin-bottom:15px;
-}
-
-ul{
-    padding-left:20px;
-}
-
-.project{
-    margin-bottom:15px;
+.hero p{
+    font-size:1.3rem;
+    margin-bottom:25px;
 }
 
 .btn{
-    display:inline-block;
-    background:#238636;
-    color:white;
-    padding:10px 20px;
     text-decoration:none;
-    border-radius:8px;
-    margin-top:10px;
+    color:white;
+    background:#2563eb;
+    padding:12px 28px;
+    border-radius:30px;
+    transition:0.3s;
 }
 
 .btn:hover{
-    background:#2ea043;
+    background:#38bdf8;
+}
+
+section{
+    padding:80px 10%;
+}
+
+h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:#38bdf8;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.skills{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.skill{
+    background:#2563eb;
+    padding:12px 20px;
+    border-radius:30px;
 }
 
 footer{
     text-align:center;
-    padding:20px;
-    background:#161b22;
+    padding:30px;
+    background:#1e293b;
 }
 </style>
 </head>
 <body>
 
-<header>
-    <h1>M Safi</h1>
-    <p>Python Developer | Freelancer | GitHub Enthusiast</p>
-</header>
-
-<div class="container">
-
-    <div class="card">
-        <h2>About Me</h2>
-        <p>
-            I am a passionate Python developer learning software development,
-            automation, and freelancing. I enjoy building projects and solving
-            real-world problems through code.
-        </p>
-    </div>
-
-    <div class="card">
-        <h2>Skills</h2>
-        <ul>
-            <li>Python Programming</li>
-            <li>HTML & CSS</li>
-            <li>Git & GitHub</li>
-            <li>Automation Scripts</li>
-            <li>Problem Solving</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h2>Projects</h2>
-
-        <div class="project">
-            <h3>Student Grade System</h3>
-            <p>Python project for calculating grades automatically.</p>
-        </div>
-
-        <div class="project">
-            <h3>Number Guessing Game</h3>
-            <p>Interactive Python game using loops and conditions.</p>
-        </div>
-
-        <div class="project">
-            <h3>GitHub Portfolio</h3>
-            <p>Personal website hosted on GitHub Pages.</p>
-        </div>
-    </div>
-
-    <div class="card">
-        <h2>Contact</h2>
-        <p>Email: your-email@example.com</p>
-        <p>GitHub: github.com/yourusername</p>
-
-        <a href="https://github.com/yourusername" class="btn">
-            Visit GitHub
-        </a>
-    </div>
-
+<div class="hero">
+    <h1>Hi, I'm <span>M Safi</span></h1>
+    <p>Python Developer • Freelancer • GitHub Enthusiast</p>
+    <a href="#projects" class="btn">View Projects</a>
 </div>
+
+<section>
+    <h2>About Me</h2>
+    <p style="text-align:center;font-size:18px;">
+        Passionate Python developer interested in automation,
+        freelancing, web development, and solving real-world problems.
+    </p>
+</section>
+
+<section>
+    <h2>Skills</h2>
+    <div class="skills">
+        <div class="skill">Python</div>
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">GitHub</div>
+        <div class="skill">Automation</div>
+        <div class="skill">Problem Solving</div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>🎯 Number Guessing Game</h3>
+            <p>Python project using loops and conditions.</p>
+        </div>
+
+        <div class="card">
+            <h3>📊 Grade Calculator</h3>
+            <p>Calculates student grades automatically.</p>
+        </div>
+
+        <div class="card">
+            <h3>⚡ Automation Scripts</h3>
+            <p>Simple automation tools built with Python.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>Contact</h2>
+    <p style="text-align:center;">
+        GitHub: github.com/yourusername
+    </p>
+</section>
 
 <footer>
     <p>© 2026 M Safi | Built with HTML & CSS</p>
